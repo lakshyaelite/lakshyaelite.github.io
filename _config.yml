@@ -238,3 +238,5 @@ jekyll-archives:
 
 plugins:
   - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-feed
