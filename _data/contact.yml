@@ -1,18 +1,24 @@
 #  The contact options.
-
-- type: github
-  icon: "fab fa-github"
-
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
 
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+
+- type: github
+  icon: "fab fa-github"
+
+- type: codepen
+  icon: "fab fa-codepen"
+  url: "https://codepen.io/lakshyaelite" # Fill with your CodePen profile link
+
+- type: devto
+  icon: "fab fa-dev"
+  url: "https://dev.to/lakshyaelite"
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
@@ -23,10 +29,13 @@
 #   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your Linkedin homepage
 #
-# - type: stack-overflow
-#   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage
-#
+- type: stack-overflow
+  icon: "fab fa-stack-overflow"
+  url: "https://stackoverflow.com/users/19254524/lakshya-singh-chauhan" # Fill with your stackoverflow homepage
+
+- type: tips
+  icon: "fa-solid fa-money-bill"
+  url: "https://getmetoffee.vercel.app/payment.html?upiId=8320390785@pz&name=Lakshya+Singh+Chauhan&price=10"
 # - type: bluesky
 #   icon: 'fa-brands fa-bluesky'
 #   url: ''                   # Fill with your Bluesky profile link

@@ -1,0 +1,49 @@
+featured:
+  - title: Toffee
+    emoji: 🍬
+    description: The easiest way to accept digital sweet in India.
+    live: https://getmetoffee.vercel.app/
+    repo: https://github.com/lakshyaelite/toffee
+    image: https://lakshya-img.netlify.app/screenshots/toffee.webp
+    badges:
+      - alt: GitHub stars
+        markdown: "[![GitHub stars](https://img.shields.io/github/stars/lakshyaelite/toffee?style=social)](https://github.com/lakshyaelite/toffee/stargazers)"
+      - alt: Last commit
+        markdown: "[![Last commit](https://img.shields.io/github/last-commit/lakshyaelite/toffee)](https://github.com/lakshyaelite/toffee/commits/main)"
+
+  - title: COVID-19 Tracker
+    emoji: 🦠
+    description: View wrong amount of COVID-19 cases.
+    live: https://lakshyasinghchauhan.com/covid-tracker/
+    repo: https://github.com/lakshyaelite/covid-tracker
+    image: https://lh3.googleusercontent.com/d/183retVTFvzaZKiHF1rSp5GzFDIIz4RJe
+    badges:
+      - alt: GitHub stars
+        markdown: "[![GitHub stars](https://img.shields.io/github/stars/lakshyaelite/covid-tracker?style=social)](https://github.com/lakshyaelite/covid-tracker/stargazers)"
+      - alt: Last commit
+        markdown: "[![Last commit](https://img.shields.io/github/last-commit/lakshyaelite/covid-tracker)](https://github.com/lakshyaelite/covid-tracker/commits/main)"
+
+others:
+  # Add any non-featured or smaller projects here
+  - title: Random Image Giver
+    emoji: 🖼️
+    description: Gets simple images from Lorem Picsum.
+    live: https://lakshyaelite.github.io/random-image-giver/
+    repo: https://github.com/lakshyaelite/random-image-giver
+    image: https://lakshya-img.netlify.app/screenshots/random_image_giver.webp
+    badges:
+      - alt: GitHub stars
+        markdown: "[![GitHub stars](https://img.shields.io/github/stars/lakshyaelite/random-image-giver?style=social)](https://github.com/lakshyaelite/random-image-giver/stargazers)"
+      - alt: Last commit
+        markdown: "[![Last commit](https://img.shields.io/github/last-commit/lakshyaelite/random-image-giver)](https://github.com/lakshyaelite/random-image-giver/commits/main)"
+  # - title: Your Project Title
+  #   emoji: 💡
+  #   description: One-line summary of what this project does or solves.
+  #   live: https://your-project-site.com
+  #   repo: https://github.com/yourusername/your-repo
+  #   image: /assets/screenshots/your-project.png
+  #   badges:
+  #     - alt: GitHub stars
+  #       markdown: "[![GitHub stars](https://img.shields.io/github/stars/yourusername/your-repo?style=social)](https://github.com/yourusername/your-repo/stargazers)"
+  #     - alt: Last commit
+  #       markdown: "[![Last commit](https://img.shields.io/github/last-commit/yourusername/your-repo)](https://github.com/yourusername/your-repo/commits/main)"

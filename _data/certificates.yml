@@ -1,0 +1,28 @@
+courses:
+  - title: "WhiteHat Jr Full Stack Development Course"
+    description: "Completed 3-year Full Stack Development course with WhiteHat Jr, covering web and app development."
+    image: https://lakshya-img.netlify.app/certificates/whitehat_ceritificate.webp
+    link: https://whitehatjrnew.wixsite.com/home
+
+iCode Global Hackathon 2024-25 Python Beginners:
+  - title: "Participation"
+    description: "Certificate of participation"
+    image: https://lakshya-img.netlify.app/certificates/icode/2024-25/icode_participation_2024_25.webp
+    link: https://icode.org
+  - title: "World"
+    description: "12th place internationally in live 1-hour coding"
+    image: https://lakshya-img.netlify.app/certificates/icode/2024-25/icode_global_2024_25.webp
+    link: https://icode.org
+  - title: "Asia"
+    description: "12th rank in Asia in live 1-hour coding hackathon"
+    image: https://lakshya-img.netlify.app/certificates/icode/2024-25/icode_asia_2024_25.webp
+    link: https://icode.org
+  - title: "India (North zone)"
+    description: "3rd place in India (North zone) in live 1-hour coding hackathon"
+    image: https://lakshya-img.netlify.app/certificates/icode/2024-25/icode_india_2024_25.webp
+    link: https://icode.org
+
+
+# Add more categories like this
+# workshops:
+#   - title: ...

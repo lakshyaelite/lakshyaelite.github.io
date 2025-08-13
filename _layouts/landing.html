@@ -1,0 +1,74 @@
+---
+layout: default
+refactor: true
+---
+{% include lang.html %}
+
+<!-- Hero Section: Latest Post -->
+{% assign latest_post = site.posts.first %}
+<section class="hero py-5 bg-light">
+  <div class="container text-center">
+    <h1 class="display-5 fw-bold">{{ latest_post.title }}</h1>
+    <p class="text-muted mb-4">{{ latest_post.excerpt | strip_html | truncate: 150 }}</p>
+    <a href="{{ latest_post.url | relative_url }}" class="btn btn-primary btn-lg">Read Now</a>
+  </div>
+</section>
+
+<!-- Recent Posts (Next 3 after latest) -->
+<section class="recent-posts py-5">
+  <div class="container">
+    <h1 class="mb-4">More from the Blog</h1>
+    <div class="row">
+      {% for post in site.posts offset: 1 limit: 3 %}
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h5>
+              <p class="card-text text-muted">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+            </div>
+            <div class="card-footer text-muted small">
+              {{ post.date | date: '%B %d, %Y' }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-primary">View All Posts</a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Project -->
+{% assign featured_project = site.data.projects.featured[0] %}
+<section class="featured-project py-5 bg-light">
+  <div class="container">
+    <h1 class="mb-4">Featured Project</h1>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img
+          src="{{ featured_project.image | relative_url }}"
+          alt="{{ featured_project.title }}"
+          class="img-fluid rounded shadow"
+          onload="this.classList.add('loaded')"
+        >
+      </div>
+      <div class="col-md-6">
+        <h2>
+          {{ featured_project.emoji }}
+          {{ featured_project.title }}
+        </h2>
+        <p>{{ featured_project.description }}</p>
+        <div class="mb-3">
+          <a href="{{ featured_project.live }}" class="btn btn-primary me-2" target="_blank">Live Demo</a>
+          <a href="{{ featured_project.repo }}" class="btn btn-outline-secondary" target="_blank">Source Code</a>
+        </div>
+        {% for badge in featured_project.badges %}
+          {{ badge.markdown | markdownify }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
