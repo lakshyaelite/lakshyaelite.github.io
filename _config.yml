@@ -161,7 +161,7 @@ pagination:
     after: 2
 
 # The base URL of your site
-baseurl: "/lakshyaelite.github.io1"
+baseurl: ""
 
 # ! ------------ The following options are not recommended to be modified ------------------
 
