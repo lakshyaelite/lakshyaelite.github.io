@@ -23,3 +23,34 @@ refactor: true
     </div>
   </div>
 </section>
+
+<!-- Featured Project -->
+{% assign featured_project = site.data.projects.featured | first %}
+<section class="featured-project py-5">
+  <div class="container">
+    <h1 class="mb-4">Featured Project</h1>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+    <img src="{{ featured_project.image }}" alt="{{ featured_project.title }} Screenshot"
+         class="img-fluid rounded shadow loading-animation"
+         style="object-fit: cover; width: 100%; aspect-ratio: 16/9; background: #222;"
+         onload="this.classList.remove('loading-animation');">
+      </div>
+      <div class="col-md-6">
+        <h2>{{ featured_project.emoji }} {{ featured_project.title }}</h2>
+        {% if featured_project.badges %}
+        <div class="mb-3" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          {% for badge in featured_project.badges %}
+            <span>{{ badge.markdown | markdownify }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <p>{{ featured_project.description }}</p>
+        <div class="mb-3">
+          <a href="{{ featured_project.live }}" class="btn btn-primary me-2" target="_blank">Live Demo</a>
+          <a href="{{ featured_project.repo }}" class="btn btn-outline-secondary" target="_blank">Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
