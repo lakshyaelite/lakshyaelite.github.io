@@ -8,7 +8,7 @@ title: Welecome
 {% assign latest_post = site.posts.first %}
 <section class="hero py-5">
   <div class="container text-center">
-    <h1 class="display-5 fw-bold">{{ latest_post.title }}</h1>
+    <h1 style="font-weight:bold; font-size:50px;">{{ latest_post.title }}</h1>
     <p class="text-muted mb-4">{{ latest_post.excerpt | strip_html | truncate: 150 }}</p>
     <a href="{{ latest_post.url | relative_url }}" class="btn btn-primary btn-lg">Read Now</a>
   </div>
