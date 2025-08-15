@@ -1,22 +1,97 @@
 ---
 layout: page
-title: Welecome
+title: Welcome
+description: "Latest updates, featured projects, and more from my blog."
 ---
+
 {% include lang.html %}
 
 <!-- Hero Section: Latest Post -->
-{% assign latest_post = site.posts.first %}
-<section class="hero py-5">
-  <div class="container text-center">
-    <h1 style="font-weight:bold; font-size:50px;">{{ latest_post.title }}</h1>
-    <p class="text-muted mb-4">{{ latest_post.excerpt | strip_html | truncate: 150 }}</p>
-    <a href="{{ latest_post.url | relative_url }}" class="btn btn-primary btn-lg">Read Now</a>
-  </div>
-</section>
+{% if site.posts.size > 0 %}
+  {% assign latest_post = site.posts.first %}
+  <section class="hero py-5" style="
+    background: {% if latest_post.image %}url('{{ latest_post.image }}'){% else %}#222{% endif %} center/cover no-repeat;
+    color: white;
+    padding: 6rem 1rem;
+    text-align: center;
+    position: relative;">
+
+    <div style="background: rgba(0, 0, 0, 0.5); padding: 2rem; border-radius: 0.5rem; display: inline-block; max-width: 800px;">
+      <h1 style="font-weight:bold; font-size:50px; margin-bottom: 1rem; color:white;">{{ latest_post.title }}</h1>
+      <p class="mb-4" style="font-size: 1.2rem;">{{ latest_post.excerpt | strip_html | truncate: 150 }}</p>
+      <a href="{{ latest_post.url | relative_url }}" class="btn btn-primary btn-lg">Read Now</a>
+    </div>
+  </section>
+{% endif %}
+
+
+<!-- Dark mode styles for recent posts -->
+<style>
+:root {
+  --post-card-bg: #fff;
+  --post-card-color: #222;
+  --post-card-border: #e0e0e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --post-card-bg: #1E1E1E;
+    --post-card-color: #f1f3f6;
+    --post-card-border: #1E1E1E;
+  }
+}
+html[data-mode="dark"],
+body[data-mode="dark"],
+[data-bs-theme="dark"],
+.dark-mode {
+  --post-card-bg: #1E1E1E;
+  --post-card-color: #f1f3f6;
+  --post-card-border: #1E1E1E;
+}
+html[data-mode="light"],
+body[data-mode="light"],
+[data-bs-theme="light"],
+.light-mode {
+  --post-card-bg: #fff;
+  --post-card-color: #222;
+  --post-card-border: #e0e0e0;
+}
+.post-card {
+  background-color: var(--post-card-bg) !important;
+  color: var(--post-card-color) !important;
+  border: 1px solid var(--post-card-border) !important;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.post-card a {
+  color: var(--post-card-color) !important;
+  text-decoration: underline;
+}
+.post-card a:hover {
+  opacity: 0.8;
+}
+</style>
 
 <!-- Recent Posts (Next 3 after latest) -->
 <section class="recent-posts">
   <div class="container">
+    <h2 class="mb-4">📰 Recent Posts</h2>
+    <div class="row g-4">
+      {% assign recent_posts = site.posts | slice: 1, 3 %}
+      {% for post in recent_posts %}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm post-card">
+            {% if post.image %}
+              <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}" style="object-fit: cover; width: 100%; height: 180px; aspect-ratio: 16/9; border-radius: 0.5rem 0.5rem 0 0;">
+            {% endif %}
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title" style="font-size: 1.25rem; line-height: 1.2;">{{ post.title }}</h3>
+              <p class="card-text mb-3">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <a href="{{ post.url | relative_url }}" class="mt-auto">Read more →</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
     <div class="text-center mt-4">
       <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-primary">View All Posts</a>
     </div>
@@ -25,15 +100,16 @@ title: Welecome
 
 <!-- Featured Project -->
 {% assign featured_project = site.data.projects.featured | first %}
+{% if featured_project %}
 <section class="featured-project py-5">
   <div class="container">
     <h1 class="mb-4">🚀 Featured Project</h1>
     <div class="row align-items-center">
       <div class="col-md-6 mb-4 mb-md-0">
-      <img src="{{ featured_project.image }}" alt="{{ featured_project.title }} Screenshot"
-         class="img-fluid rounded shadow"
-         style="object-fit: cover; width: 100%; aspect-ratio: 16/9; background: #222;"
-         onload="this.classList.remove('shimmer');">
+        <img src="{{ featured_project.image }}" alt="{{ featured_project.title }} Screenshot"
+           class="img-fluid rounded shadow"
+           style="object-fit: cover; width: 100%; aspect-ratio: 16/9; background: #222;"
+           onload="this.classList.remove('shimmer');">
       </div>
       <div class="col-md-6">
         <h2>{{ featured_project.emoji }} {{ featured_project.title }}</h2>
@@ -53,3 +129,4 @@ title: Welecome
     </div>
   </div>
 </section>
+{% endif %}

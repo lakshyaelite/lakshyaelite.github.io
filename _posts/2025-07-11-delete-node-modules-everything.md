@@ -8,6 +8,8 @@ categories: [Software, Windows]
 tags: [windows]
 ---
 
+{% include lang.html %}
+
 As a JavaScript developer, you've likely collected countless `node_modules` folders over time. These directories can grow massive and are often left behind by forgotten or abandoned projects.
 
 In this post, we’ll walk through how to easily find and delete these folders on Windows using the **Everything** search utility.
@@ -62,8 +64,8 @@ _Verifying_
 
 ## 🗑️ Step 5: Delete Multiple Folders at Once
 
-1. Use Ctrl or Shift + Click to select multiple entries.
-2. Press **Shift + Delete** to permanently remove them.
+1. Use <kbd>Ctrl</kbd> or <kbd>Shift</kbd> + <kbd>Click</kbd> to select multiple entries.
+2. Press <kbd>Shift</kbd> + <kbd>Delete</kbd> to permanently remove them.
 
 > **Be careful!** This bypasses the Recycle Bin.
 {: .prompt-danger }
