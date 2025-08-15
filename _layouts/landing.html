@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Welcome
-description: "Latest updates, featured projects, and more from my blog."
 ---
 
 {% include lang.html %}
@@ -9,21 +8,61 @@ description: "Latest updates, featured projects, and more from my blog."
 <!-- Hero Section: Latest Post -->
 {% if site.posts.size > 0 %}
   {% assign latest_post = site.posts.first %}
-  <section class="hero py-5" style="
-    background: {% if latest_post.image %}url('{{ latest_post.image }}'){% else %}#222{% endif %} center/cover no-repeat;
-    color: white;
-    padding: 6rem 1rem;
-    text-align: center;
-    position: relative;">
-
-    <div style="background: rgba(0, 0, 0, 0.5); padding: 2rem; border-radius: 0.5rem; display: inline-block; max-width: 800px;">
-      <h1 style="font-weight:bold; font-size:50px; margin-bottom: 1rem; color:white;">{{ latest_post.title }}</h1>
-      <p class="mb-4" style="font-size: 1.2rem;">{{ latest_post.excerpt | strip_html | truncate: 150 }}</p>
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <h1>{{ latest_post.title }}</h1>
+      <p>{{ latest_post.excerpt | strip_html | truncate: 150 }}</p>
       <a href="{{ latest_post.url | relative_url }}" class="btn btn-primary btn-lg">Read Now</a>
     </div>
   </section>
-{% endif %}
 
+  <style>
+    .hero-section {
+      background: {% if latest_post.image %}url('{{ latest_post.image }}'){% else %}#222{% endif %} center/cover no-repeat;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding: 6rem 1rem;
+    }
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      display: inline-block;
+      max-width: 800px;
+    }
+    .hero-overlay h1 {
+      font-weight: bold;
+      font-size: 50px;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .hero-overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 3rem 1rem;
+      }
+      .hero-overlay {
+        padding: 1.5rem;
+        max-width: 100%;
+      }
+      .hero-overlay h1 {
+        font-size: 1.75rem;
+      }
+      .hero-overlay p {
+        font-size: 1rem;
+      }
+      .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+{% endif %}
 
 <!-- Dark mode styles for recent posts -->
 <style>
