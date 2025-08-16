@@ -3,6 +3,7 @@ layout: post
 title: "Building a Poetry App with Google AI Studio: The Making of VerseForge"
 date: 2025-08-02 16:21:24 +0530
 image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gkxjhnqvog0ovuohm5j1.png
+description: "How I made a poetry app without touching any code!"
 categories: [Sofware, Projects]
 tags: [projects]
 ---

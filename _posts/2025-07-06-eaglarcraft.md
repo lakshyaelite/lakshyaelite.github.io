@@ -3,6 +3,7 @@ layout: post
 title: "50 Unblocked Eaglercraft Links for School (Bypass Fortinet)"
 date: 2025-07-06 21:20:34 +0530
 image: https://lh3.googleusercontent.com/d/1vxXZXCM3xOqcb4l1oK_yHmIr-PrhIRFQ
+description: "Shh! This is our secret!"
 categories: [eaglercraft, minecraft, unblocked]
 tags: [minecraft]
 ---

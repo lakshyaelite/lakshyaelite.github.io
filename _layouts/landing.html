@@ -11,7 +11,7 @@ title: Welcome
   <section class="hero-section">
     <div class="hero-overlay">
       <h1>{{ latest_post.title }}</h1>
-      <p>{{ latest_post.excerpt | strip_html | truncate: 150 }}</p>
+      <p>{{ latest_post.description | strip_html | truncate: 150 }}</p>
       <a href="{{ latest_post.url | relative_url }}" class="btn btn-primary btn-lg">Read Now</a>
     </div>
   </section>
@@ -124,7 +124,7 @@ body[data-mode="light"],
             {% endif %}
             <div class="card-body d-flex flex-column">
               <h3 class="card-title" style="font-size: 1.25rem; line-height: 1.2;">{{ post.title }}</h3>
-              <p class="card-text mb-3">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <p class="card-text mb-3">{{ post.description | strip_html | truncate: 100 }}</p>
               <a href="{{ post.url | relative_url }}" class="mt-auto">Read more →</a>
             </div>
           </div>
