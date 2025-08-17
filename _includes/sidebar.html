@@ -1,4 +1,5 @@
 <!-- The Side Bar -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
@@ -39,7 +40,6 @@
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
             {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
             <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
           </a>
         </li>
@@ -49,7 +49,7 @@
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
@@ -72,12 +72,27 @@
             mailto:{{ email[0] }}@{{ email[1] }}
           {%- endcapture -%}
         {% when 'rss' %}
-          {% assign url = '/rss.xml' | relative_url %}
+          <a href="javascript:void(0)"
+             aria-label="rss"
+             tabindex="0"
+             role="button"
+             data-bs-toggle="popover"
+             data-bs-html="true"
+             data-bs-trigger="focus"
+             title="Feeds"
+             data-bs-content='
+               <div class="d-flex flex-column">
+                 <a href="{{ "/rss.xml" | relative_url }}" class="d-block mb-1">RSS</a>
+                 <a href="{{ "/atom.xml" | relative_url }}" class="d-block">Atom</a>
+               </div>
+             '>
+            <i class="{{ entry.icon }}"></i>
+          </a>
         {% else %}
           {% assign url = entry.url %}
       {% endcase %}
 
-      {% if url %}
+      {% if url and entry.type != 'rss' %}
         <a
           href="{{ url }}"
           aria-label="{{ entry.type }}"
@@ -104,3 +119,12 @@
   <!-- .sidebar-bottom -->
 </aside>
 <!-- #sidebar -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  });
+</script>
