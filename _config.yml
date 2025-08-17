@@ -56,6 +56,10 @@ webmaster_verifications:
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
+# `jekyll-feed` settings
+feed:
+  path: /atom.xml
+
 # Web Analytics Settings
 analytics:
   google:
@@ -240,3 +244,4 @@ jekyll-archives:
 plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
+  - jekyll-feed
