@@ -1,7 +1,6 @@
 ---
 layout: compress
 permalink: /atom.xml
-# Enhanced Atom Feed, reference: https://validator.w3.org/feed/docs/atom.html
 ---
 
 {% capture source %}
@@ -14,36 +13,39 @@ permalink: /atom.xml
   <title type="html">{{ site.title | xml_escape }}</title>
   <subtitle>{{ site.description | xml_escape }}</subtitle>
 
-{% for post in site.posts limit: 5 %}
+  {% for post in site.posts limit: 5 %}
   {% assign post_absolute_url = post.url | absolute_url %}
   <entry>
     <title type="html">{{ post.title | xml_escape }}</title>
     <link href="{{ post_absolute_url }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}"/>
     <published>{{ post.date | date_to_xmlschema }}</published>
-    {% if post.last_modified_at %}
+    {% if post.last_modified_at and post.last_modified_at != post.date %}
     <updated>{{ post.last_modified_at | date_to_xmlschema }}</updated>
-    {% else %}
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
     {% endif %}
     <id>{{ post_absolute_url }}</id>
-    <content type="html" xml:base="{{ post_absolute_url }}">
-      <![CDATA[
-      {{ post.content }}
-      ]]>
+
+    <content type="xhtml" xml:base="{{ post_absolute_url }}">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        {{ post.content }}
+      </div>
     </content>
+
     <author>
       <name>{{ post.author | default: site.social.name | default: site.author.name }}</name>
     </author>
+
     {% if post.categories %}
-    {% for category in post.categories %}
-    <category term="{{ category | xml_escape }}"/>
-    {% endfor %}
+      {% for category in post.categories %}
+      <category term="{{ category | xml_escape }}"/>
+      {% endfor %}
     {% endif %}
+
     {% if post.tags %}
-    {% for tag in post.tags %}
-    <category term="{{ tag | xml_escape }}"/>
-    {% endfor %}
+      {% for tag in post.tags %}
+      <category term="{{ tag | xml_escape }}"/>
+      {% endfor %}
     {% endif %}
+
     <summary type="html">
       <![CDATA[
       {% if post.description %}
@@ -55,15 +57,16 @@ permalink: /atom.xml
       {% endif %}
       ]]>
     </summary>
+
     {% if post.image %}
-    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post.image | absolute_url }}"/>
-    <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ post.image | absolute_url }}"/>
+      <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post.image | absolute_url }}"/>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ post.image | absolute_url }}"/>
     {% elsif site.social.avatar %}
-    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.social.avatar | absolute_url }}"/>
-    <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.social.avatar | absolute_url }}"/>
+      <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.social.avatar | absolute_url }}"/>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.social.avatar | absolute_url }}"/>
     {% endif %}
   </entry>
-{% endfor %}
+  {% endfor %}
 </feed>
 {% endcapture %}
 {{ source | replace: '&', '&amp;' }}
