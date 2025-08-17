@@ -14,6 +14,8 @@ permalink: /rss.xml
     <generator>Jekyll {{ jekyll.version }}</generator>
     <copyright>© {{ 'now' | date: '%Y' }} {{ site.social.name | default: site.author.name }}</copyright>
     <atom:link href="{{ page.url | absolute_url }}" rel="self" type="application/rss+xml" />
+    <managingEditor>{{ site.social.email | default: site.author.email | default: 'contact@lakshyasinghchauhan.com' }} ({{ site.social.name | default: site.author.name }})</managingEditor>
+    <webMaster>{{ site.social.email | default: site.author.email | default: 'contact@lakshyasinghchauhan.com' }} ({{ site.social.name | default: site.author.name }})</webMaster>
     {% if site.social.avatar %}
     <image>
       <url>{{ site.social.avatar | absolute_url }}</url>
@@ -30,6 +32,7 @@ permalink: /rss.xml
         <guid isPermaLink="true">{{ post_absolute_url }}</guid>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <dc:creator>{{ post.author | default: site.social.name | default: site.author.name }}</dc:creator>
+    <author>{{ site.social.email | default: site.author.email | default: 'contact@lakshyasinghchauhan.com' }} ({{ post.author | default: site.social.name | default: site.author.name }})</author>
         {% if post.categories %}
         {% for category in post.categories %}
         <category>{{ category | xml_escape }}</category>
