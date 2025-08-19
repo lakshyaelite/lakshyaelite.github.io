@@ -40,6 +40,10 @@ social:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your Twitter homepage
     - https://github.com/lakshyaelite # change to your GitHub homepage
+    - https://codepen.io/lakshyaelite
+    - https://dev.to/lakshyaelite
+    - https://stackoverflow.com/users/19254524/lakshya-singh-chauhan
+    - https://getmetoffee.vercel.app/payment.html?upiId=8320390785@pz&name=Lakshya+Singh+Chauhan&price=10
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -136,7 +140,7 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled:
+    enabled: true
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development | production]

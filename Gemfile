@@ -15,4 +15,4 @@ gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "jekyll-paginate-v2"
 gem "jekyll-sitemap"
 gem "jekyll-feed"
-gem 'jekyll-compose', group: [:jekyll_plugins]
+gem 'jemoji'
