@@ -1,6 +1,6 @@
 featured:
   - title: Toffee
-    emoji: 🍬
+    emoji: ":candy:"
     description: The easiest way to accept digital sweet in India.
     live: https://getmetoffee.vercel.app/
     repo: https://github.com/lakshyaelite/toffee
@@ -12,7 +12,7 @@ featured:
         markdown: "[![Last commit](https://img.shields.io/github/last-commit/lakshyaelite/toffee)](https://github.com/lakshyaelite/toffee/commits/main)"
 
   - title: COVID-19 Tracker
-    emoji: 🦠
+    emoji: ":microbe:"
     description: View wrong amount of COVID-19 cases.
     live: https://lakshyasinghchauhan.com/covid-tracker/
     repo: https://github.com/lakshyaelite/covid-tracker
@@ -26,7 +26,7 @@ featured:
 others:
   # Add any non-featured or smaller projects here
   - title: Random Image Giver
-    emoji: 🖼️
+    emoji: ":framed_picture:"
     description: Gets simple images from Lorem Picsum.
     live: https://lakshyaelite.github.io/random-image-giver/
     repo: https://github.com/lakshyaelite/random-image-giver

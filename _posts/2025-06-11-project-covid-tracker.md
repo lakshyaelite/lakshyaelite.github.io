@@ -7,11 +7,11 @@ categories: [Software, Projects]
 tags: [projects]
 ---
 
-This project was built while vibing code with **ChatGPT**, which made the whole process a lot more fun and collaborative. 😄
+This project was built while vibing code with **ChatGPT**, which made the whole process a lot more fun and collaborative. :smile:
 
 ---
 
-## 🔧 Tools & Technologies
+## :wrench: Tools & Technologies
 
 * **HTML5** – Structure of the site
 * **CSS3** – Styling and responsive layout
@@ -20,15 +20,15 @@ This project was built while vibing code with **ChatGPT**, which made the whole 
 
 ---
 
-## 🎨 Features
+## :art: Features
 
-* 🌗 **Dark Mode** toggle with local storage persistence
-* 📱 **Responsive Design** for mobile devices
-* 🔄 **Real-time Data** pulled from the disease.sh API
+* :last_quarter_moon: **Dark Mode** toggle with local storage persistence
+* :iphone: **Responsive Design** for mobile devices
+* :arrows_counterclockwise: **Real-time Data** pulled from the disease.sh API
 
 ---
 
-## 📁 File Structure
+## :file_folder: File Structure
 
 ```plaintext
 covid-tracker/
@@ -39,7 +39,7 @@ covid-tracker/
 
 ---
 
-## 🌐 API Integration
+## :globe_with_meridians: API Integration
 
 We used the [disease.sh](https://disease.sh/) API to get real-time COVID-19 data:
 
@@ -55,7 +55,7 @@ We extracted:
 
 ---
 
-## 💡 Dark Mode
+## :bulb: Dark Mode
 
 Dark mode was implemented by toggling a class on the `body` and saving user preference with `localStorage`:
 
@@ -65,13 +65,13 @@ localStorage.setItem('theme', 'dark');
 
 ---
 
-## 📱 Responsive Design
+## :iphone: Responsive Design
 
 With max-width containers and flexible layout using CSS, the site looks great on phones and desktops alike.
 
 ---
 
-## ✅ Final Touches
+## :white_check_mark: Final Touches
 
 * Tooltip toggle icon for better UX
 * Aesthetic improvements and color contrast for light/dark modes
@@ -79,15 +79,15 @@ With max-width containers and flexible layout using CSS, the site looks great on
 
 ---
 
-## 🚀 Live Preview & Source Code
+## :rocket: Live Preview & Source Code
 
 Want to see it live or fork the project?
 
-> [🔗 GitHub Repository](https://github.com/lakshyagithub/covid-tracker)
+> [:link: GitHub Repository](https://github.com/lakshyagithub/covid-tracker)
 
 ---
 
-## 🙌 Conclusion
+## :raised_hands: Conclusion
 
 Creating your own COVID-19 tracker helps you learn modern web technologies while building something practical. We combined real-time data, themes, and accessibility – all in one clean project.
 
@@ -95,8 +95,10 @@ Whether you're a student or a frontend enthusiast, this project is a great showc
 
 ---
 
-**Stay safe and keep coding! 🇮🇳**
+**Stay safe and keep coding! :india:**
 
 ---
 
-Feel free to comment or share your version of the tracker!
+Feel free to comment or share your version of the tracker! 
+
+

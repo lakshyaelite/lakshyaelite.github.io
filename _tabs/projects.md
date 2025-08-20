@@ -6,7 +6,7 @@ icon: fas fa-code
 order: 2
 ---
 
-## 🚀 Featured Projects
+## :rocket: Featured Projects
 
 
 <style>
@@ -113,8 +113,8 @@ order: 2
             {% endif %}
             <p class="card-text mb-2 mt-1" style="font-size: 1rem; line-height: 1.5; font-family: 'Source Sans Pro', sans-serif;">{{ project.description }}</p>
             <div class="mt-auto pt-2">
-              <a href="{{ project.live }}" class="card-link">🔗 Live site</a><br>
-              <a href="{{ project.repo }}" class="card-link">💻 Source code</a>
+              <a href="{{ project.live }}" class="card-link">:link: Live site</a><br>
+              <a href="{{ project.repo }}" class="card-link">:computer: Source code</a>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ order: 2
 
 ---
 
-## 🧱 Other Projects
+## :package: Other Projects
 
 
 
@@ -146,8 +146,8 @@ order: 2
             {% endif %}
             <p class="card-text mb-2 mt-1" style="font-size: 1rem; line-height: 1.5;">{{ project.description }}</p>
             <div class="mt-auto pt-2">
-              <a href="{{ project.live }}" class="card-link">🔗 Live site</a><br>
-              <a href="{{ project.repo }}" class="card-link">💻 Source code</a>
+              <a href="{{ project.live }}" class="card-link">:link: Live site</a><br>
+              <a href="{{ project.repo }}" class="card-link">:computer: Source code</a>
             </div>
           </div>
         </div>

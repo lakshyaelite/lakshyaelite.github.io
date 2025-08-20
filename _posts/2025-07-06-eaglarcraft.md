@@ -19,7 +19,7 @@ Here’s a curated list of **50 unblocked Eaglercraft links** that might work be
 
 ---
 
-## ✅ 50 Clickable Unblocked Eaglercraft Links
+## :white_check_mark: 50 Clickable Unblocked Eaglercraft Links
 
 1. [eaglercraft.rrf.gg](https://eaglercraft.rrf.gg)  
 2. [eaglercraft.gq-games.repl.co](https://eaglercraft.gq-games.repl.co)  
@@ -74,7 +74,7 @@ Here’s a curated list of **50 unblocked Eaglercraft links** that might work be
 
 ---
 
-## 🛠️ Pro Tips
+## :hammer_and_wrench: Pro Tips
 
 - Use **incognito mode** to avoid detection or saved history.  
 - Try accessing links on different **labs, devices, or Wi-Fi networks**.  
@@ -83,7 +83,7 @@ Here’s a curated list of **50 unblocked Eaglercraft links** that might work be
 
 ---
 
-## 🎯 Safe Bookmark Trick
+## :dart: Safe Bookmark Trick
 
 Want to save a link secretly?
 
