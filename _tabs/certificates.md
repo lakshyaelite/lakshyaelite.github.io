@@ -124,7 +124,7 @@ Below are some of the certificates I’ve earned through competitions, courses, 
             <p class="card-text mb-2 mt-1" style="font-size: 1rem; line-height: 1.5;">{{ cert.description }}</p>
             {% if cert.link %}
             <div class="mt-auto pt-2">
-              <a href="{{ cert.link }}" target="_blank" class="card-link">🔗 View Issuer</a>
+              <a href="{{ cert.link }}" target="_blank" class="card-link">:link: View Issuer</a>
             </div>
             {% endif %}
           </div>
