@@ -29,7 +29,7 @@ github:
   username: lakshyaelite # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: lakshyaelite # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -38,12 +38,13 @@ social:
   email: contact@lakshyasinghchauhan.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    - https://twitter.com/lakshyaelite # change to your Twitter homepage
     - https://github.com/lakshyaelite # change to your GitHub homepage
     - https://codepen.io/lakshyaelite
     - https://dev.to/lakshyaelite
     - https://stackoverflow.com/users/19254524/lakshya-singh-chauhan
     - https://getmetoffee.vercel.app/payment.html?upiId=8320390785@pz&name=Lakshya+Singh+Chauhan&price=10
+    - https://www.reddit.com/user/lakshyaelite/
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
