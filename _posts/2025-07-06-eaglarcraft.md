@@ -9,17 +9,14 @@ tags: [minecraft]
 ---
 
 Wanna play some Minecraft at school? Here's how!
+
 > These links are for educational and entertainment purposes only.
-
 > Do **not** break your school’s acceptable use policy.
-
 > Use responsibly and at your own risk.
-
 > I shall **not** be held responsible for any damage done.
-
 {: .prompt-warning }
 
-## 🔧 **Method 1: Run It Locally (The Only Reliable Method You Control)**
+## 🔧 Method 1: Run It Locally (The Only Reliable Method)
 
 This is the only 100% real and allowed method that doesn't depend on random websites. Moreover, there us no downtime, and no requirement for internet.
 
@@ -38,7 +35,7 @@ This is the only 100% real and allowed method that doesn't depend on random webs
 
 This still works because browsers can run HTML/JS locally.
 
-## 🌐 **Method 2: Public Web Instances **
+## 🌐 Method 2: Public Web Instances
 
 These sites come and go **constantly**, so you should stick with the first method:
 1. [eaglercraft.rrf.gg](https://eaglercraft.rrf.gg)  
