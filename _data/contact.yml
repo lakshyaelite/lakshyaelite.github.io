@@ -6,20 +6,9 @@
 - type: codepen
   icon: "fab fa-codepen"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
-
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
-
-- type: reddit
-  icon: 'fa-brands fa-reddit'
-  url: 'https://www.reddit.com/user/lakshyaelite/' # Fill with your Reddit profile link
-
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
 
 - type: tips
   icon: 'fa-solid fa-money-bill'

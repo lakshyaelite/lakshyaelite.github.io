@@ -1,5 +1,9 @@
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
@@ -10,15 +14,20 @@
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
   >
   <!-- RSS Feed -->
-  <link rel="alternate" type="application/rss+xml"
-        title="{{ site.title | xml_escape }}"
-        href="{{ '/rss.xml' | absolute_url }}" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="{{ site.title | xml_escape }}"
+    href="{{ '/rss.xml' | absolute_url }}"
+  >
 
   <!-- Atom Feed -->
-  <link rel="alternate" type="application/atom+xml"
-        title="{{ site.title | xml_escape }}"
-        href="{{ '/atom.xml' | absolute_url }}" />
-
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="{{ site.title | xml_escape }}"
+    href="{{ '/atom.xml' | absolute_url }}"
+  >
 
   {%- capture seo_tags -%}
     {% seo title=false %}
@@ -80,8 +89,17 @@
   {% endunless %}
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous"
+  >
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"
+  ></script>
 
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
@@ -133,4 +151,51 @@
   {% endif %}
 
   {% include metadata-hook.html %}
+  <style>
+    #site-loader {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      background-color: rgba(255, 255, 255, 0.95);
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    #site-loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #site-loader .site-loader__icon img {
+      width: 64px;
+      height: 64px;
+      display: block;
+    }
+    @media (prefers-color-scheme: dark) {
+      #site-loader {
+        background-color: rgba(11, 11, 12, 0.95);
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      #site-loader {
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+    }
+  </style>
+
+  <script>
+    (function () {
+      function hideLoader() {
+        var l = document.getElementById('site-loader');
+        if (!l) return;
+        l.classList.add('hidden');
+        setTimeout(function () {
+          if (l && l.parentNode) l.parentNode.removeChild(l);
+        }, 600);
+      }
+      if (document.readyState === 'complete') hideLoader();
+      else window.addEventListener('load', hideLoader);
+    })();
+  </script>
 </head>
