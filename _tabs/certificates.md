@@ -5,13 +5,6 @@ permalink: /certificates/
 icon: fas fa-trophy
 order: 1
 ---
-
-Below are some of the certificates I’ve earned through competitions, courses, and achievements.
-
-<div class="mb-3" style="font-size: 1rem; color: #888;">
-  <em>Click the certificate preview to open</em>
-</div>
-
 <style>
  :root {
    --cert-card-bg: #fff;
