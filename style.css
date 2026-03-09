@@ -43,7 +43,7 @@ html, body {
 }
 
 [data-bs-theme="dark"] .code-block-wrapper {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    background: #0f172a;
 }
 
 [data-bs-theme="dark"] #giscus-container {
@@ -284,6 +284,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #2d3748;
 }
 
 pre[class*="language-"] {
@@ -344,8 +345,7 @@ code[class*="language-"] {
 /* Code block content */
 pre[class*="language-"] code {
     display: block;
-    padding: 1rem;
-    background: #2d3748 !important;
+    background: transparent !important;
     overflow-x: auto;
 }
 
