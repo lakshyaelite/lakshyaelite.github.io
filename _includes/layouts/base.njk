@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-bs-theme', prefersDark ? 'dark' : 'light');
+        })();
+    </script>
+    <title>{{ title or site.name }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="{{ title or site.name }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}">
+    <meta property="og:image" content="{{ (cover or site.ogImage) | absoluteUrl(site.url) }}">
+    <meta property="og:type" content="{{ ogType or 'website' }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title or site.name }}">
+    <meta name="twitter:description" content="{{ description or site.description }}">
+    <meta name="twitter:image" content="{{ (cover or site.ogImage) | absoluteUrl(site.url) }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js" defer></script>
+</head>
+<body class="site-body">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold tracking-tight" href="/">
+                <span class="text-primary">&lt;</span>Lakshya<span class="text-primary">/&gt;</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto px-2">
+                    <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer bg-dark text-white text-center py-5">
+        <div class="container">
+            <div class="mb-3">
+                {% for key, url in site.social %}
+                {% if url and url != "#" %}
+                <a href="{{ url }}" class="text-white mx-2 fs-4" aria-label="{{ key }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-{{ key }}"></i></a>
+                {% endif %}
+                {% endfor %}
+                {% if site.email %}
+                <a href="mailto:{{ site.email }}" class="text-white mx-2 fs-4" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                {% endif %}
+            </div>
+            <p class="text-secondary mb-0">&copy; {{ year }} {{ site.name }}. Designed for the web.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

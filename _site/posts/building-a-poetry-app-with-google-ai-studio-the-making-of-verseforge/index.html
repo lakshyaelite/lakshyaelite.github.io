@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-bs-theme', prefersDark ? 'dark' : 'light');
+        })();
+    </script>
+    <title>Building a Poetry App with Google AI Studio: The Making of VerseForge</title>
+    <meta name="description" content="How I made a poetry app without touching any code!">
+    <link rel="canonical" href="https://lakshyaelite.github.io/posts/building-a-poetry-app-with-google-ai-studio-the-making-of-verseforge/">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Building a Poetry App with Google AI Studio: The Making of VerseForge">
+    <meta property="og:description" content="How I made a poetry app without touching any code!">
+    <meta property="og:url" content="https://lakshyaelite.github.io/posts/building-a-poetry-app-with-google-ai-studio-the-making-of-verseforge/">
+    <meta property="og:image" content="https://lakshyaelite.github.io/images/verseforge.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Lakshya Singh Chauhan">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Building a Poetry App with Google AI Studio: The Making of VerseForge">
+    <meta name="twitter:description" content="How I made a poetry app without touching any code!">
+    <meta name="twitter:image" content="https://lakshyaelite.github.io/images/verseforge.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js" defer></script>
+</head>
+<body class="site-body">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold tracking-tight" href="/">
+                <span class="text-primary">&lt;</span>Lakshya<span class="text-primary">/&gt;</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto px-2">
+                    <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        
+<article class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <header class="mb-5 text-center">
+                    <h1 class="display-4 fw-bold mb-3">Building a Poetry App with Google AI Studio: The Making of VerseForge</h1>
+
+                    <div class="text-muted mb-4">
+                        <time datetime="Sat Aug 02 2025 05:30:00 GMT+0530 (India Standard Time)">Aug 2, 2025</time>
+                        <span class="mx-2">•</span>
+                        <span class="reading-time">
+                            <i class="bi bi-stopwatch-fill"></i>
+                            2 min read
+                        </span>
+                    </div>
+
+                    
+                    <figure class="post-cover-figure mb-4">
+                        <img src="/images/verseforge.png" alt="Building a Poetry App with Google AI Studio: The Making of VerseForge cover image" class="img-fluid rounded shadow">
+                        
+                    </figure>
+                    
+                </header>
+
+                <div class="content post-content" data-pagefind-body data-pagefind-meta="title: Building a Poetry App with Google AI Studio: The Making of VerseForge" data-pagefind-meta="date: Sat Aug 02 2025 05:30:00 GMT+0530 (India Standard Time)">
+                    <p><em>This post is my submission for <a href="https://dev.to/deved/build-apps-with-google-ai-studio">DEV Education Track: Build Apps with Google AI Studio</a>.</em></p>
+<h2>🔨 What I Built</h2>
+<p>I built <strong>VerseForge</strong> ✨ —an interactive poetry collaboration app that lets users co-create original poems with AI. The idea was to craft a tool where users input a <em>mood</em> (e.g., 😔 melancholic, 🎉 euphoric), a <em>theme</em> (like 🌿 nature, ❤️ love, ⚡ loss), or even just an opening line, and then work <em>with</em> the AI to complete poems in real time. Users can write a line or stanza, and the AI responds with the next portion—maintaining tone, rhythm, and poetic structure.</p>
+<p>Key features include:</p>
+<ul>
+<li>🖊 <strong>Poetry form templates:</strong> free verse, haiku, sonnet, limerick</li>
+<li>undefined <strong>Editable AI suggestions:</strong> accept, tweak, or reject each AI-generated stanza</li>
+<li>🚀 <strong>‘Surprise Me’ mode:</strong> AI adds unexpected but harmonious twists to spark creativity</li>
+<li>🗂 <strong>Save &amp; 🔗 Share:</strong> Users can return to drafts later or share their finished poems</li>
+</ul>
+<p>I used custom prompt engineering within Google AI Studio to guide the AI's poetic structure, emotional tone, and stylistic consistency.</p>
+<p>Here's the prompt I used:</p>
+<blockquote>
+<p>Please create an interactive poetry collaboration app where users can input a mood (like melancholy, euphoric, nostalgic), theme (such as nature, love, loss, adventure), or opening line, and then work together with AI to craft original poems. The app should allow users to write a line or stanza, then have the AI suggest the next portion while maintaining consistent tone, rhythm, and style. Include features for users to accept, modify, or reject AI suggestions, and provide different poetry forms (free verse, haiku, sonnet, limerick) as templates. The interface should feel like a creative writing session with options to save, share, or continue editing poems across multiple sessions. Add a 'surprise me' mode where the AI generates an unexpected but harmonious continuation to challenge the user's creative direction. Name the app VerseForge.</p>
+</blockquote>
+<h2>🛣 Demo</h2>
+<p><a href="https://github.com/lakshyaelite/VerseForge">👉 Visit the GitHub Repo</a></p>
+<p><img src="https://lh3.googleusercontent.com/d/1jQV5QOL1mezRxNfx6f0YtkMOg6wIEy_P=s220?authuser=0" alt="Demo GIF"></p>
+<h2>📚 My Experience</h2>
+<p>Building with Google AI Studio was empowering ✨. I was surprised by how nuanced the responses could be when given the right prompt structure. The biggest challenge was getting the AI to balance creativity with coherence—especially across different poetry forms. I learned how crucial it is to iterate on prompt design and to offer users creative control alongside AI input.</p>
+<p>This project reinforced how AI can be a powerful tool <em>not to replace</em>, but to <em>enhance</em> human creativity. 💭</p>
+
+                </div>
+                <div id="giscus-container" class="mb-5">
+                    
+                    <script src="https://giscus.app/client.js"
+                            data-repo="lakshyaelite/lakshyaelite.github.io"
+                            data-repo-id="R_kgDOPdTPzw"
+                            data-category="Giscus"
+                            data-category-id="DIC_kwDOPdTPz84CuN6m"
+                            data-mapping="pathname"
+                            data-strict="0"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="top"
+                            data-theme="preferred_color_scheme"
+                            data-lang="en"
+                            data-loading="lazy"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                    
+                </div>
+
+                <div class="text-center">
+                    <a href="/blog/" class="btn btn-outline-primary rounded-pill px-4">
+                        ← Back to Blog
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</article>
+    </main>
+
+    <footer class="site-footer bg-dark text-white text-center py-5">
+        <div class="container">
+            <div class="mb-3">
+                
+                
+                <a href="https://github.com/lakshyaelite" class="text-white mx-2 fs-4" aria-label="github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="mailto:contact@lakshyasinghchauhan.com" class="text-white mx-2 fs-4" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                
+            </div>
+            <p class="text-secondary mb-0">&copy; 2026 Lakshya Singh Chauhan. Designed for the web.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

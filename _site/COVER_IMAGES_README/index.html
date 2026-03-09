@@ -1,0 +1,77 @@
+<h1>Blog Cover Images</h1>
+<p>This Eleventy blog supports cover images for blog posts. Cover images appear on:</p>
+<ul>
+<li>Individual post pages (at the top of the article)</li>
+<li>Blog listing page (<code>/blog/</code>)</li>
+<li>Home page blog cards</li>
+</ul>
+<h2>How to Add Cover Images</h2>
+<ol>
+<li>
+<p><strong>Add images to the <code>images/</code> directory</strong></p>
+<ul>
+<li>Place your cover images in the <code>images/</code> folder</li>
+<li>Recommended size: 800x400px for optimal display</li>
+<li>Supported formats: JPG, PNG, SVG, GIF, WebP</li>
+</ul>
+</li>
+<li>
+<p><strong>Add cover field to post front matter</strong></p>
+<div class="code-block-wrapper">
+  <div class="code-toolbar">
+    <span class="language-label">YAML</span>
+    <button class="copy-button" onclick="copyCode(this)" title="Copy to clipboard">
+      <i class="bi bi-clipboard"></i> Copy
+    </button>
+  </div>
+  <pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"Your Post Title"</span>
+<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">"Post description"</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2026-03-07</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> layouts/post.njk
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> post
+<span class="token key atrule">cover</span><span class="token punctuation">:</span> /images/your<span class="token punctuation">-</span>cover<span class="token punctuation">-</span>image.jpg
+<span class="token punctuation">---</span>
+</code></pre>
+
+</div></li>
+<li>
+<p><strong>Build the site</strong></p>
+<div class="code-block-wrapper">
+  <div class="code-toolbar">
+    <span class="language-label">BASH</span>
+    <button class="copy-button" onclick="copyCode(this)" title="Copy to clipboard">
+      <i class="bi bi-clipboard"></i> Copy
+    </button>
+  </div>
+  <pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> run build
+</code></pre>
+
+</div></li>
+</ol>
+<h2>Cover Image Guidelines</h2>
+<ul>
+<li><strong>Aspect Ratio</strong>: 2:1 (width:height) works best</li>
+<li><strong>File Size</strong>: Keep under 500KB for fast loading</li>
+<li><strong>Alt Text</strong>: Images automatically use the post title as alt text</li>
+<li><strong>Optional</strong>: Posts without cover images display normally without images</li>
+</ul>
+<h2>Example</h2>
+<div class="code-block-wrapper">
+  <div class="code-toolbar">
+    <span class="language-label">YAML</span>
+    <button class="copy-button" onclick="copyCode(this)" title="Copy to clipboard">
+      <i class="bi bi-clipboard"></i> Copy
+    </button>
+  </div>
+  <pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"Building Accessible Web Components"</span>
+<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">"Learn how to create web components that work for everyone"</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2026-03-03</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> layouts/post.njk
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> post
+<span class="token key atrule">cover</span><span class="token punctuation">:</span> /images/web<span class="token punctuation">-</span>components<span class="token punctuation">-</span>cover.jpg
+<span class="token punctuation">---</span>
+</code></pre>
+
+</div><p>The cover image will automatically appear in all post displays throughout the site.</p>

@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+title: Blog
+description: Some random things I post
+permalink: /blog/
+---
+
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <header class="text-center">
+                    <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
+                    <p class="lead text-muted">{{ description }}</p>
+                </header>
+                <div id="search" class="mb-3"></div>
+
+                <script>
+                window.addEventListener("DOMContentLoaded", () => {
+                new PagefindUI({
+                    element: "#search"
+                });
+                });
+                </script>
+
+
+                <div class="posts-list">
+                    {# Use a specific collection and ensure it exists #}
+                    {% set posts = collections.posts | reverse %}
+                    {% for post in posts %}
+                    <article class="mb-5 pb-5 border-bottom">
+                        {% if post.data.cover %}
+                        <div class="mb-3">
+                            <a href="{{ post.url }}">
+                                <img src="{{ post.data.cover }}" alt="{{ post.data.title }}" class="blog-cover-img rounded shadow-sm" loading="lazy">
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        <h2 class="h3 mb-3">
+                            <a href="{{ post.url }}" class="text-decoration-none text-dark">{{ post.data.title }}</a>
+                        </h2>
+
+                        <div class="text-muted mb-3 small">
+                            <time datetime="{{ post.date | dateToRfc3339 }}">
+                                {# Standard 11ty date filter or custom dateDisplay #}
+                                {{ post.date | dateDisplay if dateDisplay else post.date.toDateString() }}
+                            </time>
+                            <span class="mx-2">•</span>
+                            <span class="reading-time">
+                                <i class="bi bi-stopwatch-fill"></i>
+                                {# Fallback in case filter is missing #}
+                                {{ post.templateContent | readingTime if readingTime else "5 min read" }}
+                            </span>
+                        </div>
+
+                        <p class="mb-3">
+                            {# Priority: Front-matter description > Excerpt > Truncated Content #}
+                            {{ post.data.description or post.data.page.excerpt or post.templateContent | striptags | truncate(150) }}
+                        </p>
+
+                        <a href="{{ post.url }}" 
+                           class="btn btn-outline-primary btn-sm rounded-pill" 
+                           aria-label="Read more about {{ post.data.title }}">
+                           Read More
+                        </a>
+                    </article>
+                    {% else %}
+                    {# The 'else' block in Nunjucks for loops handles empty collections #}
+                    <div class="text-center py-5">
+                        <p class="text-muted">No blog posts yet. Check back soon!</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

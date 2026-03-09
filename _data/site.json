@@ -1,0 +1,29 @@
+{
+  "name": "Lakshya Singh Chauhan",
+  "tagline": "The Web Developer",
+  "description": "Portfolio and blog of Lakshya Singh Chauhan — The Web Developer. Thoughts, tutorials, and insights on web development.",
+  "url": "https://lakshyaelite.github.io",
+  "email": "contact@lakshyasinghchauhan.com",
+  "ogImage": "/lakshya.jpg",
+  "social": {
+    "github": "https://github.com/lakshyaelite",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "youtube": ""
+  },
+  "giscus": {
+    "enabled": true,
+    "repo": "lakshyaelite/lakshyaelite.github.io",
+    "repoId": "R_kgDOPdTPzw",
+    "category": "Giscus",
+    "categoryId": "DIC_kwDOPdTPz84CuN6m",
+    "mapping": "pathname",
+    "strict": "0",
+    "reactionsEnabled": "1",
+    "emitMetadata": "0",
+    "inputPosition": "top",
+    "theme": "preferred_color_scheme",
+    "lang": "en"
+  }
+}
