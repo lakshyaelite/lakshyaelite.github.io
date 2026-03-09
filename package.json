@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "build": "eleventy && pagefind --site _site/posts",
+    "build": "eleventy && pagefind --site _site",
     "start": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

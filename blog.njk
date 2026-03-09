@@ -15,14 +15,20 @@ permalink: /blog/
                 </header>
                 <div id="search" class="mb-3"></div>
 
+                <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+                <script src="/pagefind/pagefind-ui.js"></script>
+
                 <script>
                 window.addEventListener("DOMContentLoaded", () => {
-                new PagefindUI({
-                    element: "#search"
-                });
+                    const searchEl = document.querySelector("#search");
+                    if (searchEl && window.PagefindUI) {
+                        new PagefindUI({
+                            element: "#search",
+                            showSubResults: true
+                        });
+                    }
                 });
                 </script>
-
 
                 <div class="posts-list">
                     {# Use a specific collection and ensure it exists #}
