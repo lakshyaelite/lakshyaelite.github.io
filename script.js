@@ -37,7 +37,7 @@ function renderCards(data, containerId, isProject) {
         container.innerHTML += `
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="${item.img}" class="card-img-top" alt="${item.title}">
+                    <img src="${item.img}" class="card-img-top" alt="${item.title}" loading="lazy">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-bold">${item.title}</h5>
                         <p class="card-text text-muted small mb-4">
