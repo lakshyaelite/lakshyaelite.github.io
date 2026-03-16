@@ -32,7 +32,7 @@ permalink: /blog/
 
                 <div class="posts-list">
                     {# Use a specific collection and ensure it exists #}
-                    {% set posts = collections.posts | reverse %}
+                    {% set posts = collections.posts %}
                     {% for post in posts %}
                     <article class="mb-5 pb-5 border-bottom">
                         {% if post.data.cover %}
