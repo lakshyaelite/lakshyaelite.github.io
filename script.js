@@ -1,23 +1,23 @@
 const projects = [
     {
-        title: "Fintech Dashboard",
-        desc: "Interactive financial tracking with real-time charts.",
-        img: "https://placehold.co/400x200?text=Fintech+Dashboard",
+        title: "Amazing Portfolio",
+        desc: "A modern, responsive portfolio website and blog built with Jekyll.",
+        img: "https://placehold.co/400x200?text=Amazing+Portfolio",
         link: "#"
     },
     {
-        title: "Travel AI",
-        desc: "Using generative AI for custom travel itineraries.",
-        img: "https://placehold.co/400x200?text=Travel+AI",
+        title: "Toffee",
+        desc: "The best way to accept tips via UPI in India.",
+        img: "toffee.webp",
         link: "#"
     }
 ];
 
 const certificates = [
     {
-        title: "Full Stack Developer",
-        issuer: "Codecademy",
-        date: "2026",
+        title: "Full Stack Web Development",
+        issuer: "WhiteHat Jr.",
+        date: "2023",
         img: "https://placehold.co/400x200?text=Certification"
     }
 ];
