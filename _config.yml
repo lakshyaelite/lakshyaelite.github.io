@@ -82,12 +82,12 @@ minima:
 #       * icon     Font Awesome icon id. `github` corresponds to `fa-github`.
 #       * url      Full URL of social profile.
   social_links:
-    - title: Minima Theme repository at GitHub
+    - title: GitHub
       icon: github
-      url: "https://github.com/jekyll/minima"
-    - title: Jekyll at X (formerly Twitter)
-      icon: x-twitter
-      url: "https://x.com/jekyllrb"
+      url: "https://github.com/lakshyaelite"
+    - title: YouTube
+      icon: youtube
+      url: "https://youtube.com/@elitelakshya"
 #
 #   Hide syndication feed subscription link.
 #     RSS / Atom feed link is always rendered as the last item of social-links
