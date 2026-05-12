@@ -20,9 +20,4 @@ Some of my interests include:
 - Creative tech projects
 - Chess
 
-You can also find me here:
-
-- [GitHub]: https://github.com/lakshyaelite
-- [X/Twitter]: https://x.com/lakshyaelite
-
 Thanks for visiting!
