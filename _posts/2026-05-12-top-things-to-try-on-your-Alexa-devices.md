@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Top things to do on your Amazon Alexa device"
