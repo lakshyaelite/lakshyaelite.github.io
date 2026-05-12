@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Top things to do on your Amazon Alexa device"
+title: "Top things to try on your Amazon Alexa device"
 date: 2026-05-12
 ---
 
-Whether you just got your very first Amazon Echo, or already have a smart home with an Echo device in every room, here are the top things you should do on your Echo.
+Whether you just got your very first Amazon Echo, or already have a smart home with an Echo device in every room, here are the top things you should try on your Echo.
 
 ## 1. Set up Voice ID
 
