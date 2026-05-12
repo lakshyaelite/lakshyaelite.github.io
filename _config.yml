@@ -94,3 +94,19 @@ minima:
 #     list. Set below key to `true` to not have the link to feed rendered as
 #     part of social-links list.
   hide_site_feed_link: false
+
+# Giscus
+giscus:
+  enabled: true
+  repo: "lakshyaelite/lakshyaelite.github.io"
+  repo_id: "R_kgDOPdTPzw"
+  category: "Giscus"
+  category_id: "DIC_kwDOPdTPz84CuN6m"
+  mapping: "pathname"
+  strict: "0"
+  reactions_enabled: "1"
+  emit_metadata: "0"
+  input_position: "top"
+  theme: "preferred_color_scheme"
+  lang: "en"
+  lazy_loading: false
