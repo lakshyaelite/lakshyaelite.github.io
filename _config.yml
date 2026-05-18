@@ -82,10 +82,10 @@ minima:
 #       * icon     Font Awesome icon id. `github` corresponds to `fa-github`.
 #       * url      Full URL of social profile.
   social_links:
-    - title: GitHub
+    - title: Follow me on GitHub
       icon: github
       url: "https://github.com/lakshyaelite"
-    - title: YouTube
+    - title: Subscribe to my YouTube Channel
       icon: youtube
       url: "https://youtube.com/@elitelakshya"
 #

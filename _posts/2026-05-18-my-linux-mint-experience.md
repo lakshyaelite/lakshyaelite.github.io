@@ -11,7 +11,7 @@ This was the step I thought was gonna be easy, but I was proved wrong almost ins
 In the end, I thought that I'd rather have small text than to run that command everytime to mount my disk, getting locked out of websites as my passkey was stored inside of KeePassXC and probably getting more issues in the future. Hence, I picked Linux Mint.
 The display scaling might get fixed though, as mentioned [here](https://blog.linuxmint.com/?p=5019), by **December 2026** as it **might introduce Wayland as the default instead of X11**.
 
-# 2. ome Sacrifices
+# 2. Some Sacrifices
 To switch to Linux, I had make a few sacrifices. This for me however, was small. As I am a web developer, I do not require software that work only on Windows. For documents and presentations, however, I am using a Windows VM to run Microsoft Office inside it. I am starting to getting the hang of Google Docs, Slides and Sheets, and also LibreOffice as I don't want to have a VM running just for MS Office. And also Windows optimizes the speaker and microphone output, well Linux ruined the quality. It's still usable, but not as good as before. Other than that, I don't need to sacrifice anything else. I use OpenShot for video editing, GIMP for photos, VS Code for development, NodeJS and Python. All of them work on Linux.
 
 # 3. Updates
