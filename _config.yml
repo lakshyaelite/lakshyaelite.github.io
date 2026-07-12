@@ -11,6 +11,17 @@ description: >
   Web developer, tinkerer, and technology enthusiast sharing projects,
   experiments, thoughts, and things I find interesting along the way.
 
+# Site URL used by plugins and canonical tags (update if using custom domain)
+url: "https://lakshyaelite.github.io"
+baseurl: ""
+
+# Social preview image (update path or add the file to assets/images/)
+social_image: "/assets/images/og-default.png"
+
+twitter:
+  username: "elitelakshya"
+  card: "summary_large_image"
+
 # The `>` after `description:` means to ignore line-breaks until next key. If
 #   you wish to omit the line-break after the end of text, use `>-` instead.
 # description: >
@@ -36,6 +47,7 @@ remote_theme: jekyll/minima@d4d779a
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-sitemap
 #
 # Uncomment the following setting if you wish to disable deprecation warnings
 #   from newer versions of sass converter. Adapt as required.

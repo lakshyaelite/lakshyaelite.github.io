@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lakshyaelite.github.io/sitemap.xml
+Host: https://lakshyaelite.github.io
