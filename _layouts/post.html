@@ -13,9 +13,9 @@ layout: default
             <span>{{ page.date | date: "%B %d, %Y" }}</span>
         </div>
     </header>
-
+    {% if page.image %}
     <img src="{{ page.image }}" alt="Featured image" class="article-cover">
-
+    {% endif %}
     <div class="article-content">
         <p class="article-intro">
             {{ page.description }}
@@ -27,4 +27,20 @@ layout: default
     <footer class="article-footer">
             <a href="/index.html">&larr; Back to all posts</a>
     </footer>
+    <script src="https://giscus.app/client.js"
+            data-repo="lakshyaelite/lakshyaelite.github.io"
+            data-repo-id="R_kgDOViQ38Q"
+            data-category="General"
+            data-category-id="DIC_kwDOViQ38c4DKWLn"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
 </main>
