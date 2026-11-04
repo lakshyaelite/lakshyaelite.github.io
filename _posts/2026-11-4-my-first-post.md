@@ -16,7 +16,7 @@ Since I made this entire blog from scratch using Jekyll, so I would like to shar
         <title>My site</title>
     </head>
     <body>
-        Welecome to my site!
+        Welcome to my site!
     </body>
 </html>
 ```
