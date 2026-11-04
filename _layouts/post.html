@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+
+<main class="article">
+    <a href="/index.html" class="back-link">&larr; Back to posts</a>
+    <header class="article-header">
+
+        <h1>{{ page.title }}</h1>
+
+        <div class="article-meta">
+            <span>{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+    </header>
+
+    <img src="{{ page.image }}" alt="Featured image" class="article-cover">
+
+    <div class="article-content">
+        <p class="article-intro">
+            {{ page.description }}
+        </p>
+
+        {{ content }}
+    </div>
+
+    <footer class="article-footer">
+            <a href="/index.html">&larr; Back to all posts</a>
+    </footer>
+</main>

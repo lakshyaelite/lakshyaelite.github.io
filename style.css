@@ -1,0 +1,379 @@
+---
+---
+
+/* Code syntax highlighting */
+@import url("{{ site.baseurl }}/syntax.css");
+
+body {
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("{{ site.baseurl }}/wall.jpg");
+    background-size: cover;
+    background-position: top;
+    color: white;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 750ms ease;
+}
+
+.profile-picture:hover {
+    transform: rotate(360deg);
+}
+
+.rss-button {
+    display: inline-block;
+    background-color: #f26522;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.rss-button:hover {
+    background-color: #d45116;
+}
+
+.hero-content h1 {
+    font-size: 35pt;
+}
+
+.hero-content p {
+    font-size: 20pt;
+}
+
+/* Main content */
+.section {
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+/* Default link style */
+a {
+    color: black;
+    transition: 100ms ease;
+    display: inline-block;
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+
+/* Post Styles */
+.post {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 20px;
+    transition: 100ms ease;
+}
+
+.post:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.posts a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.posts a:hover {
+    color: inherit;
+    background: none;
+}
+
+.post-image {
+    width: 400px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.post > div:not(.post-image) {
+    padding: 20px;
+}
+
+.post img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 350ms ease;
+}
+
+.post img:hover {
+    transform: scale(1.2);
+}
+
+/* Paginator */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 35px 0;
+}
+
+.pagination a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+.pagination a:hover {
+    background-color: #eee;
+}
+
+.pagination .active {
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.page-dots {
+    padding: 8px 4px;
+    color: #888;
+}
+
+/* Responsiveness (Tablet) */
+@media (max-width: 900px) {
+    .hero {
+        padding: 35px;
+        gap: 25px;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 28pt;
+    }
+
+    .section {
+        padding: 0 25px;
+    }
+
+    .post-image {
+        width: 300px;
+    }
+}
+
+/* Responsiveness (Mobile) */
+@media (max-width: 650px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 20px;
+        gap: 15px;
+    }
+
+    .profile-picture {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-content h1 {
+        font-size: 25pt;
+    }
+
+    .hero-content p {
+        font-size: 16pt;
+    }
+
+    .section {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .post {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .post-image {
+        width: calc(100% + 40px);
+        height: 200px;
+        margin: -20px -20px -20px -20px;
+    }
+
+    .post img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .post h2 {
+        margin-top: 20px;
+    }
+
+    .pagination {
+        gap: 3px;
+    }
+
+    .pagination a {
+        padding: 8px 10px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .article {
+        margin: 30px auto;
+        padding: 0 18px;
+    }
+
+    .article-header h1 {
+        font-size: 26pt;
+    }
+
+    .article-cover {
+        max-height: 250px;
+    }
+
+    .article-content {
+        font-size: 12pt;
+    }
+
+    .article-content h2 {
+        font-size: 20pt;
+    }
+
+    .article-intro {
+        font-size: 14pt;
+    }
+}
+
+
+/* Post page */
+.article {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+.article-header {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.article-header h1 {
+    font-size: 36pt;
+    margin: 0 0 15px;
+}
+
+.article-meta {
+    display: flex;
+    gap: 12px;
+    color: #777;
+    font-size: 11pt;
+}
+
+.article-cover {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.article-content {
+    font-size: 14pt;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article-content h2 {
+    font-size: 23pt;
+    margin-top: 35px;
+    color: black;
+}
+
+.article-content p {
+    margin: 18px 0;
+}
+
+.article-intro {
+    font-size: 16pt;
+    color: #555;
+}
+
+.article-content blockquote {
+    font-family: 'Georgia', serif;
+    font-size: 16pt;
+    border-left: 4px solid #f26522;
+    margin: 30px 0;
+    padding: 10px 20px;
+    background: #f7f7f7;
+    border-radius: 0 5px 5px 0;
+    font-style: italic;
+}
+
+.article-footer {
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+    padding-top: 25px;
+}
+
+.article-footer a {
+    text-decoration: none;
+}
+
+/* Code Block */
+.article-content pre {
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+.article-content pre code {
+    display: block;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.article-content code {
+    font-family: 'Courier New', Courier, monospace;
+    background: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.article-content h1,
+.article-content h2 {
+    text-align: left;
+}

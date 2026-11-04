@@ -1,0 +1,50 @@
+---
+title: Home
+layout: default
+---
+
+<div class="section">
+    <div class="posts">
+        {% for post in paginator.posts %}
+        <a href="{{ post.url }}" class="post-link">
+            <div class="post">
+                <div class="post-image">
+                    {% if post.image %}
+                        <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
+                    {% else %}
+                        <img class="post-image" src="https://placehold.co/400x200?text=No+Image" alt="{{ post.title }}">
+                    {% endif %}
+                </div>
+                <div>
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.excerpt | strip_html | truncatewords: 30, "..." }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <!-- Jekyll Pagination -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="page-arrow">&larr;</a>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <span class="page-number active">{{ page }}</span>
+            {% elsif page == 1 %}
+                <a href="{{ '/' | relative_url }}" class="page-number">{{ page }}</a>
+            {% else %}
+                <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}" class="page-number">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="page-arrow">&rarr;</a>
+        {% endif %}
+
+    </div>
+    {% endif %}
+</div>
