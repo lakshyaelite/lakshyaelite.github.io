@@ -29,6 +29,7 @@ body {
     object-fit: cover;
     flex-shrink: 0;
     transition: transform 750ms ease;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
 .profile-picture:hover {
@@ -52,10 +53,12 @@ body {
 
 .hero-content h1 {
     font-size: 35pt;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
     font-size: 20pt;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Main content */

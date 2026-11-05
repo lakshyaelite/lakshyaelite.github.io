@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="hero">
-        <img src="{{ site.baseurl }}/lakshya.png" alt="Profile Picture" class="profile-picture">
+        <img src="{{ site.baseurl }}/lakshya.png" alt="Profile Picture" class="profile-picture" fetchpriority="high">
 
         <div class="hero-content">
             <h1>{{ site.title }}</h1>
@@ -23,12 +23,5 @@
     </div>
     <script data-goatcounter="https://lakshyaelite.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-    <script>
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker.register("/sw.js");
-        });
-    }
-    </script>
 </body>
 </html>
