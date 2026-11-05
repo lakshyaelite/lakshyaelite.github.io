@@ -34,4 +34,3 @@ Personally, I think Jekyll is the best way to write blogs. It uses Markdown for 
 
 ## Conclusion
 Congratulations on removing Google from your life (for the most part)! If you have any suggestions, leave a comment down below. Thank you for reading!
-```
