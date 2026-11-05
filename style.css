@@ -404,12 +404,11 @@ a:hover {
     border: 1px solid #ccc;
     border-radius: 6px;
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: 150ms ease;
 }
 
 #search-input:focus {
-    border-color: #555;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
 }
 
 #results-container {
@@ -436,7 +435,7 @@ a:hover {
 
 #results-container a:hover {
     text-decoration: underline;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
 .search-desc {
