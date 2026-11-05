@@ -366,6 +366,8 @@ a:hover {
 .article-content h1,
 .article-content h2 {
     text-align: left;
+    margin: 0px;
+    padding: 0px;
 }
 
 .article-content img {
