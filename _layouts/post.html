@@ -9,6 +9,14 @@ layout: default
 
         <h1>{{ page.title }}</h1>
 
+        {% if page.tags %}
+        <div class="post-tags article-tags">
+            {% for tag in page.tags %}
+            <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
         <div class="article-meta">
             <span>{{ page.date | date: "%B %d, %Y" }}</span>
         </div>
