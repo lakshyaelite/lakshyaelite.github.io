@@ -26,7 +26,7 @@ html {
 
 body {
     margin: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
     transition: background-color 200ms ease, color 200ms ease;
