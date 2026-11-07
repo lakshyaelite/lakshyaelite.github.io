@@ -259,7 +259,6 @@ a:hover {
 .article {
     max-width: 850px;
     margin: 50px auto;
-    padding: 0 25px;
 }
 
 .article-header {
@@ -279,7 +278,7 @@ a:hover {
 
 .article-meta {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     color: var(--text-muted);
     font-size: 11pt;
     width: 100%;
@@ -291,11 +290,10 @@ a:hover {
     max-height: 450px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 25px;
 }
 
 .article-content {
-    font-size: 14pt;
+    font-size: 13pt;
     line-height: 1.8;
     color: var(--text-soft);
 }
