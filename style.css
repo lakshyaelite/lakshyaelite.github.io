@@ -298,10 +298,6 @@ a:hover {
     color: var(--text-soft);
 }
 
-.article-content h2 {
-    color: var(--text);
-}
-
 .article-content blockquote {
     font-family: 'Georgia', serif;
     font-size: 16pt;
@@ -329,6 +325,7 @@ a:hover {
     text-align: left;
     margin: 0px;
     padding: 0px;
+    color: var(--text);
 }
 
 .article-content img {
