@@ -20,7 +20,7 @@ layout: default
         <div class="article-meta">
             <span>{{ page.date | date: "%B %d, %Y" }}</span>
             &bull;
-            <span>Views: <div id="stats"></div></span>
+            <span style="display: flex;"><div id="stats" style="margin-right: 3px;"></div> Views</span>
         </div>
     </header>
     {% if page.image %}
@@ -56,7 +56,7 @@ layout: default
         fetch(`https://lakshyaelite.goatcounter.com/counter/${encodeURIComponent(postPath)}.json`)
             .then(response => response.json())
             .then(data => {
-                statsDiv.textContent = data.value;
+                statsDiv.textContent = data.count;
             })
             .catch(error => {
                 console.error('Error fetching view count:', error);
