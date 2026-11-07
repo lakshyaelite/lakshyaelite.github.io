@@ -112,7 +112,6 @@ a:hover {
 .post {
     display: flex;
     align-items: stretch;
-    border: 1px solid var(--border);
     border-radius: 5px;
     padding: 0;
     margin-bottom: 20px;
@@ -212,49 +211,11 @@ a:hover {
     color: var(--text-muted);
 }
 
-/* Responsiveness (Tablet) */
+/* Responsiveness */
 @media (max-width: 900px) {
-    .hero {
-        padding: 35px;
-        gap: 25px;
-    }
-
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-    }
-
-    .hero-content h1 {
-        font-size: 28pt;
-    }
-
-    .section {
-        padding: 0 25px;
-    }
-
-    .post {
-        flex-direction: column;
-    }
-
-    .post-image {
-        width: 100%;
-        height: 220px;
-        margin: 0;
-    }
-}
-
-/* Responsiveness (Mobile) */
-@media (max-width: 650px) {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 35px 20px;
-        gap: 15px;
-    }
-
-    .profile-picture {
-        width: 160px;
-        height: 160px;
     }
 
     .hero-content h1 {
@@ -266,7 +227,6 @@ a:hover {
     }
 
     .section {
-        margin: 25px auto;
         padding: 0 15px;
     }
 
@@ -286,10 +246,6 @@ a:hover {
         height: 100%;
     }
 
-    .post h2 {
-        margin-top: 0px;
-    }
-
     .pagination {
         gap: 3px;
     }
@@ -298,35 +254,6 @@ a:hover {
         padding: 8px 10px;
     }
 }
-
-
-@media (max-width: 650px) {
-    .article {
-        margin: 30px auto;
-        padding: 0 18px;
-    }
-
-    .article-header h1 {
-        font-size: 26pt;
-    }
-
-    .article-cover {
-        max-height: 250px;
-    }
-
-    .article-content {
-        font-size: 12pt;
-    }
-
-    .article-content h2 {
-        font-size: 20pt;
-    }
-
-    .article-intro {
-        font-size: 14pt;
-    }
-}
-
 
 /* Post page */
 .article {
@@ -501,81 +428,4 @@ a:hover {
     background-color: var(--search-highlight);
     color: var(--text);
     border-radius: 2px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #111827;
-        --bg-elevated: #1f2937;
-        --surface: #1b2430;
-        --surface-strong: #243041;
-        --text: #f3f4f6;
-        --text-soft: #dce3ee;
-        --text-muted: #a5b4c7;
-        --border: #374151;
-        --accent: #ff8a5b;
-        --accent-strong: #ff6b35;
-        --shadow: rgba(0, 0, 0, 0.35);
-        --search-highlight: #8a6b00;
-        --code-bg: #18212d;
-    }
-
-    body {
-        background: var(--bg);
-        color: var(--text);
-    }
-
-    .hero {
-        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
-    }
-
-    .post,
-    .article-content blockquote,
-    #search-input,
-    .pagination a {
-        background-color: var(--bg-elevated);
-    }
-
-    .article-content pre {
-        background: var(--code-bg);
-        border: 1px solid var(--border);
-    }
-
-    .rss-button {
-        background-color: var(--accent);
-    }
-
-    .rss-button:hover {
-        background-color: var(--accent-strong);
-    }
-
-    .hero-content p,
-    .hero-content h1,
-    .article-header h1,
-    .article-content h2,
-    .article-content,
-    .article-intro,
-    .article-meta,
-    .search-desc,
-    .post,
-    .posts a,
-    .posts a:hover,
-    #results-container a,
-    .pagination a,
-    .page-dots {
-        color: var(--text);
-    }
-
-    .article-content blockquote,
-    .article-footer,
-    .back-link,
-    #search-input,
-    .post,
-    #results-container li {
-        border-color: var(--border);
-    }
-
-    .article-content :not(pre) > code {
-        color: var(--text-soft);
-    }
 }
