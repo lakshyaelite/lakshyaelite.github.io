@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/favicon.svg" />
-    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+
+    <!-- Favicon links -->
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Lakshya's Blog" />
-    <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest" />
+    <link rel="manifest" href="{{ site.baseurl }}/assets/favicons/site.webmanifest" />
+
+    <!-- SEO -->
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="author" content="{{ site.author }}">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ page.image }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{{ page.title }}">
+    <meta property="twitter:description" content="{{ page.description }}">
+    <meta property="twitter:image" content="{{ page.image }}">
+
     <title>{{ site.title }}</title>
 </head>
 <body>

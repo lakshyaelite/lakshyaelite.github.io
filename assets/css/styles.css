@@ -2,7 +2,7 @@
 ---
 
 /* Code syntax highlighting */
-@import url("{{ site.baseurl }}/syntax.css");
+@import url("{{ site.baseurl }}/assets/css/syntax.css");
 
 :root {
     --bg: #f8f8f8;

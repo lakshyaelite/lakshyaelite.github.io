@@ -8,7 +8,7 @@ layout: default
     <input type="text" id="search-input" placeholder="🔎 Search blog posts..">
     <ul id="results-container"></ul>
     <br>
-    <script src="{{ 'simple-jekyll-search.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
     <script>
         var highlightMiddleware = window.createHighlightTemplateMiddleware({
             className: 'search-highlight',
@@ -18,7 +18,7 @@ layout: default
         window.simpleJekyllSearch = new SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
-            json: 'search.json',
+            json: '/assets/data/search.json',
             searchResultTemplate: '<li><a href="{url}?query={query}">{title}</a><div class="post-tags">{tags}</div><p class="search-desc">{content}</p></li>',
             templateMiddleware: function(prop, value, template, query, matchInfo) {
                 const highlighted = highlightMiddleware(
