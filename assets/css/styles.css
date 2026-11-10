@@ -20,13 +20,32 @@
     --code-bg: #f4f4f4;
 }
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #171717;
+        --bg-elevated: #222222;
+        --surface: #2a2a2a;
+        --surface-strong: #353535;
+        --text: #eeeeee;
+        --text-soft: #cccccc;
+        --text-muted: #999999;
+        --border: #383838;
+        --accent: #f26522;
+        --accent-strong: #ff7938;
+        --shadow: rgba(0, 0, 0, 0.35);
+        --search-highlight: #66551c;
+        --code-bg: #303030;
+    }
+}
+
 html {
     background-color: var(--bg);
 }
 
 body {
     margin: 0px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'inter', sans-serif;
     background: var(--bg);
     color: var(--text);
     transition: background-color 200ms ease, color 200ms ease;
@@ -34,7 +53,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("{{ site.baseurl }}/wall.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ site.baseurl }}/wall.png');
     background-size: cover;
     background-position: top;
     color: white;
@@ -43,20 +62,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 40px;
-}
-
-.profile-picture {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    transition: transform 750ms ease;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-}
-
-.profile-picture:hover {
-    transform: rotate(360deg);
+    flex-direction: column;
+    text-align: center;
 }
 
 .rss-button {
@@ -72,6 +79,7 @@ body {
 
 .rss-button:hover {
     background-color: #d45116;
+    color: white;
 }
 
 .hero-content h1 {
@@ -214,11 +222,6 @@ a:hover {
 
 /* Responsiveness */
 @media (max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .hero-content h1 {
         font-size: 25pt;
     }

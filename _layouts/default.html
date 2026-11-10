@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
 
+    <!-- Quicklink -->
+    <script defer src="https://cdn.jsdelivr.net/npm/quicklink@3.0.2/dist/quicklink.umd.js"></script>
+    <script>
+    window.addEventListener('load', () => {
+        quicklink.listen();
+    });
+    </script>
+
     <!-- Favicon links -->
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/favicons/favicon.svg" />
@@ -33,8 +41,6 @@
 </head>
 <body>
     <div class="hero">
-        <img src="{{ site.baseurl }}/lakshya.png" alt="Profile Picture" class="profile-picture" fetchpriority="high">
-
         <div class="hero-content">
             <h1>{{ site.title }}</h1>
             <p>{{ site.description }}</p>
