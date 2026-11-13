@@ -5,7 +5,7 @@
 @import url("{{ site.baseurl }}/assets/css/syntax.css");
 
 :root {
-    --bg: #f8f8f8;
+    --bg: white;
     --bg-elevated: #ffffff;
     --surface: #f1f1f1;
     --surface-strong: #e7e7e7;
