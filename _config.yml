@@ -53,6 +53,9 @@ minima:
     - title: GitHub
       icon: github
       url: "https://github.com/lakshyaelite"
+    - title: Unsplash
+      icon: unsplash
+      url: "https://unsplash.com/@lakshyaelite"
   
   giscus:
     enable: true
