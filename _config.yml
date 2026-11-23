@@ -55,6 +55,7 @@ minima:
       url: "https://github.com/lakshyaelite"
   
   giscus:
+    enable: true
     repo: lakshyaelite/lakshyaelite.github.io
     repo-id: R_kgDOJ0g5xA
     category: General
