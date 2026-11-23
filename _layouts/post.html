@@ -1,66 +1,50 @@
 ---
-layout: default
+layout: base
 ---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-
-<main class="article">
-    <a href="/" class="back-link">&larr; Back to posts</a>
-    <header class="article-header">
-
-        <h1>{{ page.title }}</h1>
-
-        {% if page.tags %}
-        <div class="post-tags article-tags">
-            {% for tag in page.tags %}
-            <span class="post-tag">{{ tag }}</span>
-            {% endfor %}
-        </div>
-        {% endif %}
-        
-        <div class="article-meta">
-            <span>{{ page.date | date: "%B %d, %Y" }}</span>
-            &bull;
-            <span style="display: flex;"><div id="stats" style="margin-right: 3px;"></div> Views</span>
-        </div>
-    </header>
-    {% if page.image %}
-    <img src="{{ page.image }}" alt="Featured image" class="article-cover">
-    {% endif %}
-    <div class="article-content">
-        {{ content }}
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {% assign pdate = page.date | date_to_xmlschema %}
+      {%- if page.modified_date %}<span class="meta-label">Published:</span>{% endif %}
+      <time class="dt-published" datetime="{{ pdate }}" itemprop="datePublished">
+        {{ pdate | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        <span class="bullet-divider">•</span>
+        <span class="meta-label">Updated:</span>
+        {%- assign mdate = page.modified_date | date_to_xmlschema %}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+      {%- if page.author %}
+      <div class="{% unless page.modified_date %}force-inline {% endunless %}post-authors">
+        {%- for author in page.author %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+          {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      </div>
+      {%- endif %}
     </div>
+  </header>
 
-    <footer class="article-footer">
-            <a href="/">&larr; Back to all posts</a>
-    </footer>
-    <br>
-    <script src="https://giscus.app/client.js"
-            data-repo="lakshyaelite/lakshyaelite.github.io"
-            data-repo-id="R_kgDOViQ38Q"
-            data-category="General"
-            data-category-id="DIC_kwDOViQ38c4DKWLn"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="preferred_color_scheme"
-            data-lang="en"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
-    <script>
-        let postPath = new URL(window.location.href).pathname;
-        let statsDiv = document.getElementById("stats");
-        fetch(`https://lakshyaelite.goatcounter.com/counter/${encodeURIComponent(postPath)}.json`)
-            .then(response => response.json())
-            .then(data => {
-                statsDiv.textContent = data.count;
-            })
-            .catch(error => {
-                console.error('Error fetching view count:', error);
-                statsDiv.textContent = 'N/A';
-            });
-    </script>
-</main>
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if jekyll.environment == 'production' -%}
+    {% if page.comments == false -%}
+    <div class="comments-disabled-message">
+      Comments have been disabled for this post.
+    </div>
+    {% else -%}
+      {%- include comments.html -%}
+    {% endif -%}
+  {% endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
