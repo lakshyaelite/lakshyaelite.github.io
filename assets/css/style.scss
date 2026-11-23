@@ -9,6 +9,14 @@
 input {
   padding: 0.5rem;
   width: 100%;
+  border: 1px solid #ccc;
+  transition: 100ms ease-in-out;
+}
+
+input:active,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px skyblue;
 }
 
 .search-highlight {
